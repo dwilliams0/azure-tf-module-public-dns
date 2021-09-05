@@ -10,7 +10,7 @@ variable "location" {
 
 variable "public_dns_zone_name" {
   description = "Name of DNS Zone"
-  default     = "public.dantest.com"
+  default     = ""
 }
 
 variable "public_dns_a_record" {
@@ -31,7 +31,7 @@ variable "ttl" {
 variable "dns_records" {
   description = "IPv4 address of record"
   type        = list(string)
-  default     = ["10.0.180.17"]
+  default     = [""]
 }
 
 variable "environment" {
@@ -40,13 +40,8 @@ variable "environment" {
 }
 
 variable "tag_buildby" {
-  description = "Racker that built the resource."
-  default     = "Dan Williams"
-}
-
-variable "tag_buildticket" {
-  description = "Build ticket number."
-  default     = "12354-232123"
+  description = "Who built the resource."
+  default     = ""
 }
 
 variable "tag_builddate" {
